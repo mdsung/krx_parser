@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "krx-parser"
+version = "0.1.0"
+description = ""
+authors = ["MinDong Sung <mdskylover@gmail.com>"]
+readme = "README.md"
+packages = [{include = "krx_parser"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pykrx = "^1.0.40"
+matplotlib = "^3.6.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
