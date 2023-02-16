@@ -5,7 +5,7 @@ from pathlib import Path
 import pandas as pd
 from pykrx import stock
 
-OUTPUT_PATH = Path("/Users/mindong/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/51 주식/51.12 상한가 천만주 정리/")
+OUTPUT_PATH = Path("/Users/mindongsung/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/51 주식/51.12 상한가 천만주 정리")
 
 class Market(Enum):
     KOSPI = 'KOSPI'
@@ -60,17 +60,16 @@ def dataframe_to_markdown(df: pd.DataFrame):
         f"## [[{row['종목명']}]] (등락률 = {round(row['등락률'], 2)}, 거래량 = {human_format(row['거래량'])})\n\n"
         for _, row in df.iterrows()
     )    
-def save_document(document):
-    output_file_path = OUTPUT_PATH / f"{get_today(format = '%Y-%m-%d')} 상한가 천만주.md"
+def save_document(document, output_filepath):
     assert not output_file_path.exists()
     with open(OUTPUT_PATH / f"{get_today(format = '%Y-%m-%d')} 상한가 천만주.md", "w") as f:
         f.write(document)
     
 def main():
-    
-    document = create_document()
-    save_document(document)
-
+    output_file_path = OUTPUT_PATH / f"{get_today(format = '%Y-%m-%d')} 상한가 천만주.md"
+    if not output_file_path.exists():
+        document = create_document()
+        save_document(document, output_file_path)
     
 if __name__ == '__main__':
     main()
