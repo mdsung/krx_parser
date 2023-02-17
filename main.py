@@ -60,7 +60,7 @@ def dataframe_to_markdown(df: pd.DataFrame):
         f"## [[{row['종목명']}]] (등락률 = {round(row['등락률'], 2)}, 거래량 = {human_format(row['거래량'])})\n\n"
         for _, row in df.iterrows()
     )    
-def save_document(document, output_filepath):
+def save_document(document, output_file_path):
     assert not output_file_path.exists()
     with open(OUTPUT_PATH / f"{get_today(format = '%Y-%m-%d')} 상한가 천만주.md", "w") as f:
         f.write(document)
