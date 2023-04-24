@@ -173,7 +173,7 @@ tests = ["check-manifest", "coverage", "defusedxml", "markdown2", "olefile", "pa
 
 [[package]]
 name = "pykrx"
-version = "1.0.40"
+version = "1.0.41"
 description = "KRX data scraping"
 category = "main"
 optional = false
@@ -773,7 +773,7 @@ pillow = [
     {file = "Pillow-9.4.0.tar.gz", hash = "sha256:a1c2d7780448eb93fbcc3789bf3916aa5720d942e37945f4056680317f1cd23e"},
 ]
 pykrx = [
-    {file = "pykrx-1.0.40-py3-none-any.whl", hash = "sha256:9ae0e7c6f5ead591027224ddd14d5d09d2220d26590de613930a677fa3a988f7"},
+    {file = "pykrx-1.0.41-py3-none-any.whl", hash = "sha256:04a5461c87bd7bfe92a1ac5d281225801a9c1993f9f9dc96bc795ecae6921875"},
 ]
 pyparsing = [
     {file = "pyparsing-3.0.9-py3-none-any.whl", hash = "sha256:5026bae9a10eeaefb61dab2f09052b9f4307d44aee4eda64b309723d8d206bbc"},
