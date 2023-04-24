@@ -97,22 +97,20 @@ def dataframe_to_markdown(df: pd.DataFrame):
     )
 
 
-def save_document(document):
-    output_file_path = (
-        OUTPUT_PATH / f"{get_today(format = '%Y-%m-%d')} 상한가 천만주.md"
-    )
+def save_document(document, output_file_path):
     assert not output_file_path.exists()
-    with open(
-        OUTPUT_PATH / f"{get_today(format = '%Y-%m-%d')} 상한가 천만주.md", "w"
-    ) as f:
+    with open(output_file_path, "w") as f:
         f.write(document)
 
 
 def main():
-    output_file_path = OUTPUT_PATH / f"{get_today(format = '%Y-%m-%d')} 상한가 천만주.md"
+    output_file_path = (
+        OUTPUT_PATH / f"{get_today(format = '%Y-%m-%d')} 상한가 천만주.md"
+    )
     if not output_file_path.exists():
         document = create_document()
         save_document(document, output_file_path)
-    
-if __name__ == '__main__':
+
+
+if __name__ == "__main__":
     main()
