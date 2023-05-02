@@ -10,6 +10,7 @@ packages = [{include = "krx_parser"}]
 python = "^3.10"
 pykrx = "^1.0.40"
 matplotlib = "^3.6.3"
+python-dotenv = "^1.0.0"
 
 
 [build-system]

@@ -1,13 +1,14 @@
 import datetime
+import os
 from enum import Enum
 from pathlib import Path
 
 import pandas as pd
+from dotenv import load_dotenv
 from pykrx import stock
 
-OUTPUT_PATH = Path(
-    "/Users/mindong/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Vault/51 주식/51.12 상한가 천만주 정리/"
-)
+load_dotenv()
+OUTPUT_PATH = Path(os.getenv("OUTPUT_PATH"))
 
 
 class Market(Enum):
